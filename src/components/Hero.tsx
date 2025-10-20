@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 import heroImage from "@/assets/team-collaboration.jpg";
 
 export const Hero = () => {
-  const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const navigate = useNavigate();
 
   return (
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
@@ -29,9 +28,9 @@ export const Hero = () => {
         <Button 
           variant="hero" 
           size="xl"
-          onClick={scrollToContact}
+          onClick={() => navigate('/assessment')}
         >
-          Schedule My Free Website Assessment
+          Take Your Free Website Assessment
         </Button>
       </div>
     </section>

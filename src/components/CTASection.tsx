@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import ctaImage from "@/assets/cta-professional.jpg";
 
 export const CTASection = () => {
+  const navigate = useNavigate();
   const benefits = [
     "Analyze your current online presence.",
     "Identify your biggest opportunities for growth.",
@@ -42,8 +44,8 @@ export const CTASection = () => {
               </div>
             ))}
           </div>
-          <Button variant="hero" size="xl">
-            Claim My Free Assessment Now
+          <Button variant="hero" size="xl" onClick={() => navigate('/assessment')}>
+            Start My Free Assessment
           </Button>
         </div>
       </div>

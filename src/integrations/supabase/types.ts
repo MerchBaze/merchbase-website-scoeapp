@@ -14,7 +14,81 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      assessments: {
+        Row: {
+          analysis_complete: boolean | null
+          analysis_summary: string | null
+          budget_range: string | null
+          company_name: string
+          competitors_better: boolean | null
+          created_at: string | null
+          design_score: number | null
+          email: string
+          frustrations: string[] | null
+          id: string
+          industry: string
+          lost_business: boolean | null
+          mobile_score: number | null
+          overall_score: number | null
+          performance_score: number | null
+          primary_goal: string | null
+          recommendations: Json | null
+          satisfaction_score: number | null
+          seo_score: number | null
+          timeline: string | null
+          website_age: string | null
+          website_url: string | null
+        }
+        Insert: {
+          analysis_complete?: boolean | null
+          analysis_summary?: string | null
+          budget_range?: string | null
+          company_name: string
+          competitors_better?: boolean | null
+          created_at?: string | null
+          design_score?: number | null
+          email: string
+          frustrations?: string[] | null
+          id?: string
+          industry: string
+          lost_business?: boolean | null
+          mobile_score?: number | null
+          overall_score?: number | null
+          performance_score?: number | null
+          primary_goal?: string | null
+          recommendations?: Json | null
+          satisfaction_score?: number | null
+          seo_score?: number | null
+          timeline?: string | null
+          website_age?: string | null
+          website_url?: string | null
+        }
+        Update: {
+          analysis_complete?: boolean | null
+          analysis_summary?: string | null
+          budget_range?: string | null
+          company_name?: string
+          competitors_better?: boolean | null
+          created_at?: string | null
+          design_score?: number | null
+          email?: string
+          frustrations?: string[] | null
+          id?: string
+          industry?: string
+          lost_business?: boolean | null
+          mobile_score?: number | null
+          overall_score?: number | null
+          performance_score?: number | null
+          primary_goal?: string | null
+          recommendations?: Json | null
+          satisfaction_score?: number | null
+          seo_score?: number | null
+          timeline?: string | null
+          website_age?: string | null
+          website_url?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
