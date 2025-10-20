@@ -22,13 +22,12 @@ export const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Contact</h3>
             <p className="text-muted-foreground">
-              Email: hello@merchbase.com<br />
-              Phone: (555) 123-4567
+              Email: hello@merchbase.com
             </p>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-muted-foreground">
-          <p>&copy; 2024 MerchBase. All rights reserved.</p>
+          <p>&copy; 2025 MerchBase. All rights reserved.</p>
         </div>
       </div>
     </footer>
