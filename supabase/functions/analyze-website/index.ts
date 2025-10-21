@@ -176,6 +176,15 @@ Provide 4-8 specific, actionable recommendations. Focus on business impact, not 
 
     if (updateError) throw updateError;
 
+    // Trigger email sending (non-blocking, fire and forget)
+    supabase.functions.invoke("send-assessment-email", {
+      body: { assessmentId },
+    }).then((emailResp) => {
+      console.log("Email trigger response:", emailResp);
+    }).catch((emailError) => {
+      console.error("Error triggering email:", emailError);
+    });
+
     return new Response(
       JSON.stringify({ success: true, analysis }),
       { 
