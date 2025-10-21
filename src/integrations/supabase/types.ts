@@ -24,12 +24,15 @@ export type Database = {
           created_at: string | null
           design_score: number | null
           email: string
+          email_sent: boolean | null
+          email_sent_at: string | null
           frustrations: string[] | null
           id: string
           industry: string
           lost_business: boolean | null
           mobile_score: number | null
           overall_score: number | null
+          pdf_url: string | null
           performance_score: number | null
           primary_goal: string | null
           recommendations: Json | null
@@ -48,12 +51,15 @@ export type Database = {
           created_at?: string | null
           design_score?: number | null
           email: string
+          email_sent?: boolean | null
+          email_sent_at?: string | null
           frustrations?: string[] | null
           id?: string
           industry: string
           lost_business?: boolean | null
           mobile_score?: number | null
           overall_score?: number | null
+          pdf_url?: string | null
           performance_score?: number | null
           primary_goal?: string | null
           recommendations?: Json | null
@@ -72,12 +78,15 @@ export type Database = {
           created_at?: string | null
           design_score?: number | null
           email?: string
+          email_sent?: boolean | null
+          email_sent_at?: string | null
           frustrations?: string[] | null
           id?: string
           industry?: string
           lost_business?: boolean | null
           mobile_score?: number | null
           overall_score?: number | null
+          pdf_url?: string | null
           performance_score?: number | null
           primary_goal?: string | null
           recommendations?: Json | null
@@ -86,6 +95,78 @@ export type Database = {
           timeline?: string | null
           website_age?: string | null
           website_url?: string | null
+        }
+        Relationships: []
+      }
+      blog_posts: {
+        Row: {
+          affiliate_disclosure: string | null
+          affiliate_links: Json | null
+          author_image_url: string | null
+          author_name: string | null
+          category: string
+          content: string
+          created_at: string | null
+          excerpt: string | null
+          featured: boolean | null
+          featured_image_url: string | null
+          id: string
+          keywords: string[] | null
+          meta_description: string | null
+          meta_title: string | null
+          published_at: string | null
+          slug: string
+          status: string | null
+          tags: string[] | null
+          title: string
+          updated_at: string | null
+          view_count: number | null
+        }
+        Insert: {
+          affiliate_disclosure?: string | null
+          affiliate_links?: Json | null
+          author_image_url?: string | null
+          author_name?: string | null
+          category: string
+          content: string
+          created_at?: string | null
+          excerpt?: string | null
+          featured?: boolean | null
+          featured_image_url?: string | null
+          id?: string
+          keywords?: string[] | null
+          meta_description?: string | null
+          meta_title?: string | null
+          published_at?: string | null
+          slug: string
+          status?: string | null
+          tags?: string[] | null
+          title: string
+          updated_at?: string | null
+          view_count?: number | null
+        }
+        Update: {
+          affiliate_disclosure?: string | null
+          affiliate_links?: Json | null
+          author_image_url?: string | null
+          author_name?: string | null
+          category?: string
+          content?: string
+          created_at?: string | null
+          excerpt?: string | null
+          featured?: boolean | null
+          featured_image_url?: string | null
+          id?: string
+          keywords?: string[] | null
+          meta_description?: string | null
+          meta_title?: string | null
+          published_at?: string | null
+          slug?: string
+          status?: string | null
+          tags?: string[] | null
+          title?: string
+          updated_at?: string | null
+          view_count?: number | null
         }
         Relationships: []
       }
